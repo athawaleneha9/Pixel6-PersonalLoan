@@ -1,53 +1,55 @@
-<mat-card class="matCardMargin">
-  <mat-card-title>Personal Loan</mat-card-title>
-  <form [formGroup]="loanRegistrationForm">
-    <div fxLayout="row wrap">
-      <div fxFlex="100">
-        <mat-form-field appearance="fill" class="full-width">
-          <mat-label>Full Name</mat-label>
-          <input matInput type="text" value="" maxlength="140" name="fullname" formControlName="fullname" required>
-        </mat-form-field>
-      </div>
 
-      <div fxFlex="100">
-        <mat-form-field appearance="fill" class="full-width" ng-model="city" required>
-          <mat-label>City</mat-label>
-          <input matInput type="text" value="" name="city" formControlName="city">
-        </mat-form-field>
-      </div>
-
-      <div fxFlex="100">
-        <mat-form-field appearance="fill" class="full-width">
-          <mat-label>Email</mat-label>
-          <input matInput type="email" value="" name="email" maxlength="255" formControlName="email" required="">
-        </mat-form-field>
-      </div>
-
-      <div fxFlex="100">
-        <mat-form-field appearance="fill" class="full-width">
-          <mat-label>PAN Number</mat-label>
-          <input matInput type="text" value="" name="panNumber" maxlength="10" formControlName="panNumber" required>
-        </mat-form-field>
-      </div>
-
-      <div fxFlex="100">
-        <mat-form-field appearance="fill" class="full-width">
-          <mat-label>Mobile</mat-label>
-          <input matInput type="phone" value="" name="mobile" maxlength="10" formControlName="mobile" required>
-          <button *ngIf="!isShowSendOtp" mat-button type="button" class="btn-padding"
-            (click)="sendOtpClick(loanRegistrationForm.value)" color="primary">Send OTP</button>
-          <button *ngIf="isShowResendOtp" mat-button type="button" class="btn-padding" color="primary">Resend
-            OTP</button>
-        </mat-form-field>
-      </div>
-      <div *ngIf="isShowVerifyOtp" fxFlex="100">
-        <mat-form-field appearance="fill" class="full-width">
-          <mat-label>Enter OTP</mat-label>
-          <input matInput type="number" value="" name="OTP" minlength="4" maxlength="4" formControlName="OTP">
-          <button mat-button type="button" (click)="verifyOtp(loanRegistrationForm.value)" class="btn-padding"
-            color="primary">Verify OTP</button>
-        </mat-form-field>
-      </div>
-    </div>
-  </form>
-</mat-card>
+    <mat-card class="matCardMargin">
+      <mat-card-title>Personal Loan</mat-card-title>
+      <form [formGroup]="loanRegistrationForm">
+        <div fxLayout="row wrap">
+          <div fxFlex="100">
+            <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Full Name</mat-label>
+              <input matInput type="text" value="" maxlength="140" name="fullname" formControlName="fullname" required>
+            </mat-form-field>
+          </div>
+    
+          <div fxFlex="100">
+            <mat-form-field appearance="fill" class="full-width" ng-model="city" required>
+              <mat-label>City</mat-label>
+              <input matInput type="text" value="" name="city" formControlName="city">
+            </mat-form-field>
+          </div>
+    
+          <div fxFlex="100">
+            <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Email</mat-label>
+              <input matInput type="email" value="" name="email" maxlength="255" formControlName="email" required="">
+            </mat-form-field>
+          </div>
+    
+          <div fxFlex="100">
+            <mat-form-field appearance="fill" class="full-width">
+              <mat-label>PAN Number</mat-label>
+              <input matInput type="text" value="" name="panNumber" maxlength="10" formControlName="panNumber" required>
+            </mat-form-field>
+          </div>
+    
+          <div fxFlex="100">
+            <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Mobile</mat-label>
+              <input matInput type="phone" value="" name="mobile" maxlength="10" formControlName="mobile" required>
+              <button *ngIf="!isShowSendOtp" mat-button type="button" class="btn-padding"
+                (click)="sendOtpClick(loanRegistrationForm.value)" color="primary">Send OTP</button>
+              <button *ngIf="isShowResendOtp" mat-button type="button" class="btn-padding" color="primary">Resend
+                OTP</button>
+            </mat-form-field>
+          </div>
+          <div *ngIf="isShowVerifyOtp" fxFlex="100">
+            <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Enter OTP</mat-label>
+              <input matInput type="number" value="" name="OTP" minlength="4" maxlength="4" formControlName="OTP">
+              <button mat-button type="button" (click)="verifyOtp(loanRegistrationForm.value)" class="btn-padding"
+                color="primary">Verify OTP</button>
+            </mat-form-field>
+          </div>
+        </div>
+      </form>
+    </mat-card>
+  
